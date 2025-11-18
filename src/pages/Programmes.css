@@ -1,0 +1,232 @@
+.programmes-page {
+  padding: 2rem 1.5rem 6rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #0096c8;
+  margin-bottom: 0.5rem;
+}
+
+.dark-mode .page-header h1 {
+  color: #40d4ff;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+.dark-mode .subtitle {
+  color: #aaa;
+}
+
+/* Programmes Container */
+.programmes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Day Section */
+.day-section {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode .day-section {
+  background: #1e3a5f;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.day-title {
+  font-size: 1.5rem;
+  color: #0096c8;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #40d4ff;
+  display: inline-block;
+}
+
+.dark-mode .day-title {
+  color: #40d4ff;
+  border-bottom-color: #60e4ff;
+}
+
+/* Programmes List */
+.programmes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Programme Card */
+.programme-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f0f9ff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.programme-card:hover {
+  transform: translateX(5px);
+  border-left-color: #0096c8;
+  box-shadow: 0 5px 15px rgba(0, 150, 200, 0.2);
+}
+
+.dark-mode .programme-card {
+  background: #2a4a6f;
+}
+
+.dark-mode .programme-card:hover {
+  border-left-color: #40d4ff;
+  box-shadow: 0 5px 15px rgba(64, 212, 255, 0.2);
+}
+
+/* Programme Time */
+.programme-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  background: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.dark-mode .programme-time {
+  background: #1e3a5f;
+}
+
+.time-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.time-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0096c8;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dark-mode .time-text {
+  color: #40d4ff;
+}
+
+/* Programme Details */
+.programme-details {
+  flex: 1;
+}
+
+.programme-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.dark-mode .programme-name {
+  color: #fff;
+}
+
+.programme-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.programme-type,
+.programme-dj {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #666;
+}
+
+.dark-mode .programme-type,
+.dark-mode .programme-dj {
+  color: #bbb;
+}
+
+.type-icon,
+.dj-icon {
+  font-size: 1rem;
+}
+
+/* Programmes Note */
+.programmes-note {
+  background: #fff8e1;
+  border-left: 4px solid #ff9a56;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.dark-mode .programmes-note {
+  background: #3a2f1f;
+  border-left-color: #ffb366;
+}
+
+.programmes-note p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.dark-mode .programmes-note p {
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .programmes-page {
+    padding: 1.5rem 1rem 6rem;
+  }
+
+  .programme-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .programme-time {
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0.8rem;
+  }
+
+  .time-text {
+    white-space: normal;
+  }
+
+  .programme-name {
+    font-size: 1.1rem;
+  }
+
+  .programme-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .day-title {
+    font-size: 1.3rem;
+  }
+}

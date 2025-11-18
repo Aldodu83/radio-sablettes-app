@@ -1,0 +1,229 @@
+.accueil-page {
+  padding-bottom: 0;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(135deg, #0096c8 0%, #40d4ff 50%, #ff9a56 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Animation d'onde pour simuler la mer */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.3));
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.radio-name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.slogan {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b9d 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 106, 157, 0.4);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 106, 157, 0.5);
+}
+
+.play-icon {
+  font-size: 1.2rem;
+}
+
+/* Sections */
+.presentation-section,
+.events-section,
+.cta-section {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.presentation-section h2,
+.events-section h2,
+.cta-section h2 {
+  font-size: 2rem;
+  color: #0096c8;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 150, 200, 0.2);
+  border-color: #40d4ff;
+}
+
+.event-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.event-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.event-date {
+  color: #ff9a56;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem 1.5rem 6rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.social-button {
+  background: white;
+  border: 2px solid #0096c8;
+  color: #0096c8;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-button:hover {
+  background: #0096c8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .radio-name {
+    font-size: 2rem;
+  }
+
+  .slogan {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .presentation-section,
+  .events-section,
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+}

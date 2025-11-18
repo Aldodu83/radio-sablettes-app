@@ -1,0 +1,212 @@
+/* ============================
+   STYLES GLOBAUX - Radio Sablettes Tamaris
+   ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f9fc;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.dark-mode body {
+  background: #0a1929;
+  color: #e0e0e0;
+}
+
+/* Application Container */
+.app {
+  min-height: 100vh;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app.dark-mode {
+  background: #0a1929;
+}
+
+/* Page Container */
+.page-container {
+  min-height: 100vh;
+  padding-bottom: 80px; /* Espace pour la navigation en bas */
+}
+
+.page {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: #40d4ff;
+  color: white;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0096c8;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #007ba7;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: #1e3a5f;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #40d4ff;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #60e4ff;
+}
+
+/* Buttons general styling */
+button {
+  font-family: inherit;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Links */
+a {
+  color: #0096c8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007ba7;
+}
+
+.dark-mode a {
+  color: #40d4ff;
+}
+
+.dark-mode a:hover {
+  color: #60e4ff;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  /* Large tablets and small desktops */
+}
+
+@media (max-width: 768px) {
+  /* Tablets and large phones */
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small phones */
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Loading animation (optional) */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #0096c8;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0096c8;
+  outline-offset: 2px;
+}
+
+.dark-mode button:focus-visible,
+.dark-mode a:focus-visible,
+.dark-mode input:focus-visible,
+.dark-mode select:focus-visible,
+.dark-mode textarea:focus-visible {
+  outline-color: #40d4ff;
+}

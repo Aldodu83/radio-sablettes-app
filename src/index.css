@@ -1,0 +1,89 @@
+/* ============================
+   RESET & BASE STYLES
+   ============================ */
+
+:root {
+  /* Couleurs principales */
+  --color-primary: #0096c8;
+  --color-primary-light: #40d4ff;
+  --color-secondary: #ff9a56;
+  --color-secondary-light: #ff6b9d;
+  
+  /* Couleurs de fond */
+  --bg-light: #f5f9fc;
+  --bg-white: #ffffff;
+  
+  /* Texte */
+  --text-dark: #333333;
+  --text-medium: #666666;
+  --text-light: #999999;
+  
+  /* Mode sombre */
+  --bg-dark: #0a1929;
+  --bg-dark-card: #1e3a5f;
+  --bg-dark-hover: #2a4a6f;
+  --text-dark-primary: #e0e0e0;
+  --text-dark-secondary: #bbbbbb;
+  
+  /* Ombres */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Smooth transitions globales */
+* {
+  transition: background-color var(--transition-normal), 
+              color var(--transition-normal);
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  transition: all var(--transition-normal);
+}
